@@ -47,8 +47,11 @@ def download_model_if_not_exists(file_id, output_name):
     Baixa o arquivo do Google Drive se ele não existir localmente.
     """
     if not os.path.exists(output_name):
+        print(f"Downloading {output_name} from Google Drive...")
         url = f'https://drive.google.com/uc?id={file_id}'
         gdown.download(url, output_name, quiet=False)
+    else:
+        print(f"{output_name} already exists. Skipping download.")
     return output_name
 
 # --- Carregar Modelos ---
@@ -57,9 +60,9 @@ def load_models():
     # -----------------------------------------------------------
     # ⚠️ IDS DOS ARQUIVOS DO DRIVE
     # -----------------------------------------------------------
-    id_scaler = "1Jyuc_k1VG_i3_U-vGDZc-mJ8EX_nsJj3"
-    id_alcool = "1uqRaMs5Yk3BINYntLzGX85vAPZ95Lyyb"
-    id_fumo = "1UX8xszo5CQdv-75Kgl3aGkZTDoCHPfni"
+    id_scaler = "1-9muoEzXUPd_TyMKvQSm5_eUVLBQ2PrX"
+    id_alcool = "1J3JM5V4DiMelidNnytF4sMKs25GqXYau"
+    id_fumo = "1iIqRaZApGUhc5upi4K22orFA7B1UGny"
     # -----------------------------------------------------------
 
     try:
