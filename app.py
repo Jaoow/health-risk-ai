@@ -52,10 +52,10 @@ def download_model_if_not_exists(file_id, output_name):
     return output_name
 
 # --- Carregar Modelos ---
-@st.cache_resource
+@st.cache_resource(show_spinner=False)
 def load_models():
     # -----------------------------------------------------------
-    # ⚠️ IDs DOS ARQUIVOS DO DRIVE
+    # ⚠️ IDS DOS ARQUIVOS DO DRIVE
     # -----------------------------------------------------------
     id_scaler = "1Jyuc_k1VG_i3_U-vGDZc-mJ8EX_nsJj3"
     id_alcool = "1uqRaMs5Yk3BINYntLzGX85vAPZ95Lyyb"
